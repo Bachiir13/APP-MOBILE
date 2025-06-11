@@ -116,4 +116,18 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+    // Importe la BoM Firebase
+implementation platform('com.google.firebase:firebase-bom:33.15.0')
+
+// Par exemple, pour Firebase Auth
+implementation 'com.google.firebase:firebase-auth'
+
+// Pour Analytics
+implementation 'com.google.firebase:firebase-analytics'
+
+// Ajoute les autres produits Firebase ici
+
 }
+
+apply plugin: 'com.google.gms.google-services'
+

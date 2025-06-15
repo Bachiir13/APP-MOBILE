@@ -4,12 +4,26 @@ import { View, Text, ScrollView, StyleSheet } from 'react-native';
 const Information = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.header}>Tutoriel d'utilisation</Text>
+      <Text style={styles.header}>Présentation de l'entreprise</Text>
+
+      <View style={styles.section}>
+        <Text style={styles.text}>
+          Bienvenue chez ToDoMaster, votre solution de gestion de tâches simple, intuitive et efficace. Nous sommes dédiés à vous aider à organiser votre quotidien et booster votre productivité.
+        </Text>
+        <Text style={styles.text}>
+          Notre équipe passionnée travaille constamment à améliorer votre expérience utilisateur avec des fonctionnalités adaptées à vos besoins.
+        </Text>
+        <Text style={styles.text}>
+          Merci de nous faire confiance !
+        </Text>
+        
+      </View>
+            <Text style={styles.header}>Tutoriel d'utilisation</Text>
       
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>1. Ajouter une tâche</Text>
         <Text style={styles.text}>
-          Pour créer une tâche, saisissez un titre dans le champ "Titre". Vous pouvez aussi ajouter une description optionnelle et une date limite au format JJ-MM-AAAA.
+          Pour créer une tâche, saisissez un titre dans le champ "Titre". Vous pouvez aussi ajouter une description optionnelle et une date limite ou votre tâche devra être réalisé.
         </Text>
       </View>
 
@@ -24,22 +38,6 @@ const Information = () => {
         <Text style={styles.sectionTitle}>3. Marquer une tâche comme terminée</Text>
         <Text style={styles.text}>
           Appuyez simplement sur le titre d'une tâche pour la marquer comme complétée ou non.
-        </Text>
-      </View>
-
-      <View style={styles.separator} />
-
-      <Text style={styles.header}>Présentation de l'entreprise</Text>
-
-      <View style={styles.section}>
-        <Text style={styles.text}>
-          Bienvenue chez ToDoMaster, votre solution de gestion de tâches simple, intuitive et efficace. Nous sommes dédiés à vous aider à organiser votre quotidien et booster votre productivité.
-        </Text>
-        <Text style={styles.text}>
-          Notre équipe passionnée travaille constamment à améliorer votre expérience utilisateur avec des fonctionnalités adaptées à vos besoins.
-        </Text>
-        <Text style={styles.text}>
-          Merci de nous faire confiance !
         </Text>
       </View>
     </ScrollView>

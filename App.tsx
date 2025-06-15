@@ -11,6 +11,7 @@ import Home from './src/screens/Home';
 import Login from './src/screens/Login';
 import Register from './src/screens/Register';
 import NavBar from './src/components/NavBar';
+import Footer from './src/components/Footer';
 import Contact from './src/screens/Contact';
 import Information from './src/screens/information';
 
@@ -85,6 +86,8 @@ const MainNavigator = ({ user }: MainNavigatorProps) => {
   <Stack.Screen name="Contact" component={Contact} />
   <Stack.Screen name="Information" component={Information} />
 </Stack.Navigator>
+<Footer />
+      
 
 
     </>

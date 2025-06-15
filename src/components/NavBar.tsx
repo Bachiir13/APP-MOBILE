@@ -24,7 +24,6 @@ const NavBar = ({ isLoggedIn, onNavigate, onLogout }: NavBarProps) => {
 
   const toggleDrawer = () => {
     if (drawerOpen) {
-      // fermer
       Animated.timing(drawerAnim, {
         toValue: -DRAWER_WIDTH,
         duration: 250,
@@ -52,21 +51,22 @@ const NavBar = ({ isLoggedIn, onNavigate, onLogout }: NavBarProps) => {
           <Text style={styles.burgerIcon}>☰</Text>
         </TouchableOpacity>
         <Text style={styles.title}>ToDoList</Text>
-        {/* Espace vide pour équilibrer la barre */}
         <View style={{ width: 40 }} />
       </View>
 
-      {/* Overlay semi-transparent */}
       {drawerOpen && (
         <Pressable style={styles.overlay} onPress={toggleDrawer} />
       )}
 
-      {/* Drawer / menu latéral */}
       <Animated.View style={[styles.drawer, { left: drawerAnim }]}>
         <Text style={styles.drawerTitle}>Menu</Text>
 
         <TouchableOpacity onPress={() => handleNavigate('Home')} style={styles.drawerItem}>
           <Text style={styles.drawerItemText}>Accueil</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => handleNavigate('Information')} style={styles.drawerItem}>
+          <Text style={styles.drawerItemText}>Information</Text>
         </TouchableOpacity>
 
         {!isLoggedIn ? (
@@ -80,9 +80,6 @@ const NavBar = ({ isLoggedIn, onNavigate, onLogout }: NavBarProps) => {
           </>
         ) : (
           <>
-            <TouchableOpacity onPress={() => handleNavigate('Information')} style={styles.drawerItem}>
-              <Text style={styles.drawerItemText}>Information</Text>
-            </TouchableOpacity>
             <TouchableOpacity onPress={() => handleNavigate('Contact')} style={styles.drawerItem}>
               <Text style={styles.drawerItemText}>Contact</Text>
             </TouchableOpacity>

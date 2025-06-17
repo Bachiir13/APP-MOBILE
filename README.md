@@ -32,3 +32,14 @@ Une application mobile de gestion de tâches développée avec **React Native**.
    ```bash
    git clone https://github.com/bachiir13/APP-MOBILE
    cd MonAp
+
+## Arborescence
+
+/src
+  /components
+  /screens
+  /services
+  /utils
+App.js
+firebaseConfig.js
+

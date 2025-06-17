@@ -43,3 +43,10 @@ Une application mobile de gestion de tâches développée avec **React Native**.
 App.js
 firebaseConfig.js
 
+## Sécurité
+
+Formik et YUP
+Async Storage
+TSX
+Firebase auth
+
